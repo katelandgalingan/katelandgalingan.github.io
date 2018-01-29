@@ -18,7 +18,7 @@
     <![endif]-->
     <style media="screen">
       .height1 {
-        height: 75px;
+        height: 100px;
       }
 
       .height2 {
@@ -36,16 +36,16 @@
   <div class="container">
 
   <div class="row">
-    <div class="col-md-12 height1"> </div>
+    <div class="col-md-12 height1 randomColor"> </div>
 
   <div class="row">
-    <div class="col-md-2 height2"></div>
-    <div class="col-md-8 height2"></div>
-    <div class="col-md-2 height2"> </div>
+    <div class="col-md-2 height2 randomColor"></div>
+    <div class="col-md-8 height2 randomColor"></div>
+    <div class="col-md-2 height2 randomColor"> </div>
   </div>
 
   <div class="row">
-    <div class="col-md-12 height1"></div>
+    <div class="col-md-12 height1 randomColor"></div>
   </div>
   </div>
 
@@ -77,6 +77,43 @@
     })
 
     })
+    </script>
+    <script type="text/javascript">
+    /*
+    multi line comment
+    */
+    // single line comment
+
+    /*
+      alert("my JS!"); //name of a function, then () to call the function
+      // in this case "my JS!" is called the 'parameter'
+      // in this case its text, which is always within '' or ""
+      console.log("Write to the console....")
+
+      //above are built-in functions
+
+      //we can also define our own functions
+
+      function myFirstFunction(){//function definition
+      //whatever is in the {} will run when we call the function
+      console.log("Write from inside the function....")
+      }
+
+      myFirstFunction();
+      myFirstFunction();
+      myFirstFunction();
+      myFirstFunction();
+
+      function myFunctionWithParameter(name){
+
+        console.log("Hello"+name);
+      }
+
+      myFunctionWithParameter("Kateland");
+      myFunctionWithParameter(", how are you?")
+
+      //a function call
+    */
     </script>
   </body>
 </html>
