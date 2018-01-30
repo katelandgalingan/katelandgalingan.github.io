@@ -18,16 +18,14 @@
     <![endif]-->
     <style media="screen">
       .height1 {
-        height: 100px;
+        height: 150px;
       }
 
       .height2 {
         height: 200px;
       }
 
-      .height3 {
-        height: 250px;
-      }
+
     </style>
 
   </head>
@@ -36,7 +34,7 @@
   <div class="container">
 
   <div class="row">
-    <div class="col-md-12 height1 randomColor"> </div>
+    <div class="col-md-12 height1 randomColor"></div>
 
   <div class="row">
     <div class="col-md-2 height2 randomColor"></div>
@@ -114,6 +112,38 @@
 
       //a function call
     */
+
+    //BooLean values are true or false
+    var myOnOff = true;
+    var isDaytime = false;
+
+    //number values
+    var salary = 100000;
+    var carPrice = 25000.25;
+
+    //text or string values
+    var emailAddress ="kgalin01@guelphhumber.ca";
+    var sentence = "The Judgement of Paris.";
+    var anotherSentence = "Anderson's class";
+
+    var salary1 = 100000;
+    var salary2 = "100000";
+
+    var taxes = 25000;
+
+    console.log("My take home pay is" + (salary1-taxes));
+
+    console.log("a bunch of info : " + salary + "and" + carPrice + "and even more" + isDaytime);
+    var myConcatenation = "2a bunch of info : " + salary + "and" + carPrice + "and even more" + isDaytime;
+
+    console.log(myConcatenation);
+
+    function writeToConsole(myString){
+      console.log(myString);
+    }
+
+    writeToConsole(myConcatenation);
+    writeToConsole("3"+myConcatenation);
     </script>
   </body>
 </html>
