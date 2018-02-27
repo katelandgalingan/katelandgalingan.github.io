@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bears</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <style media="screen">
+    .height1{
+      height: 115px;
+    }
+    .height2{
+      height:80px;
+    }
+    .height3{
+    height:400px;
+    }
+
+    .heading{
+      font-size: 65px;
+      text-align: center;
+      color: #7F1E39;
+    }
+
+    ul, li{
+      font-size: 25px;
+      display: inline-block;
+      word-spacing: 25px;
+      text-align: center;
+    }
+
+  </style>
+
+  <body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 height1 heading">Spot These Bears
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 height2">
+        <ul>
+          <li>About</li>
+          <li>Gallery</li>
+          <li>Facts</li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 output">
+
+      </div>
+      <div class="col-md-4 height3 randomColor">
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 height1 randomColor"></div>
+    </div>
+
+
+  </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        //get a random color between 0 and 255
+        function getRandomColor() {
+          return Math.floor(Math.random() * 255);
+        }
+
+        var randomColor = $(".randomColor");
+
+        $.each(randomColor, function(index, item) {
+          $(this).css("background-color", "RGB(" + getRandomColor() + "," + getRandomColor() + "," + getRandomColor() + ")");
+        })
+
+      })
+    </script>
+    <script>
+      var bears = [{
+        "type":"Panda",
+        "color":"Black & White",
+        "location":"Toronto Zoo",
+        "picture":"img/bear1.jpg"
+      },
+      {
+        "type":"Polar Bear",
+        "color":"White",
+        "location":"Zoo",
+        "picture":"img/bear2.jpg"
+      },
+      {
+        "type":"Black Bear",
+        "color":"Black",
+        "location":"Toronto Zoo",
+        "picture":"img/bear3.jpg"
+      },
+      {
+        "type":"Brown Bear",
+        "color":"Brown",
+        "location":"Alaska",
+        "picture":"img/bear4.jpg"
+      },
+      {
+        "type":"Andean Bear",
+        "color":"Black & White",
+        "location":"South America",
+        "picture":"img/bear5.jpg"
+      }
+];
+      $(document).ready(function(){
+        //$(".output").html("test output");
+        var html="<table class='table table-striped table-hover'>"+
+        "<tr>"+
+          "<th>picture</th>"+
+          "<th>type</th>"+
+          "<th>color</th>"+
+          "<th>location</th>"+
+        "</tr>";
+
+        //here is the loop for the array 'bears'
+        for(var i=0;i<bears.length;i++){
+          console.log("i "+i);
+          html += "<tr>"+
+            "<td><img src='"+bears[i].picture+"' /></td>"+
+            "<td>"+ bears[i].type +"</td>"+
+            "<td>"+ bears[i].color+"</td>"+
+            "<td>"+ bears[i].location +"</td>"+
+          "</tr>";
+        }
+
+        html += "</table>";
+        $(".output").html(html);
+
+        });
+    </script>
+  </body>
+</html>
