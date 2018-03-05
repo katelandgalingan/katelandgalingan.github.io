@@ -1,0 +1,42 @@
+[
+  {
+    "brand":"Burberry",
+    "color":"Brown",
+    "expensive":true,
+    "style":"cat eye",
+    "LooksBestOn":"oval",
+    "nice":true
+  },
+  {
+    "brand":"Ray-Ban",
+    "color":"bronze shiny red",
+    "expensive":true,
+    "style":"round wrap",
+    "LooksBestOn":"heart",
+    "nice":true
+  },
+  {
+    "brand":"Gucci",
+    "color":"Grey",
+    "expensive":true,
+    "style":"rectangle wrap",
+    "LooksBestOn":"oval",
+    "nice":false
+  },
+  {
+    "brand":"Oakley",
+    "color":"black green",
+    "expensive":false,
+    "style":"sport",
+    "LooksBestOn":"round",
+    "nice":false
+  },
+  {
+    "brand":"Versace",
+    "color":"black gold",
+    "expensive":"yes",
+    "style":"aviator",
+    "LooksBestOn":"square",
+    "nice":false
+  }
+]
