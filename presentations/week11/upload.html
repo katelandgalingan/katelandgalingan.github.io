@@ -6,26 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cards Website Template</title>
   <style media="screen">
-  @import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
-  @import url('https://fonts.googleapis.com/css?family=Handlee');
-  body{
-    background-image: url(img/background.jpg);
-  }
-    .flexSpaceAround{
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    }
-
-    header{
-      font-family: 'Handlee', cursive;
-      font-size: 40px;
-      font-weight: 700;
-      padding: 1em;
-      color: #BD576A;
-      background-color: white;
-    }
-
     .outputArray {
       display: flex;
       justify-content: space-around;
@@ -39,18 +19,11 @@
 
     .cardInfo {
       text-align: center;
-      font-family: 'Poppins', sans-serif;
     }
 
     .itemButton{
       text-align: right;
       padding: 10px;
-    }
-
-    .nameLabel{
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: 24px;
     }
   </style>
 
@@ -68,13 +41,7 @@
 
 <body>
   <div class="container">
-    <div class="row">
-      <div class="col-md-12 flexSpaceAround">
-        <header>
-          Furry Friends Club
-        </header>
-      </div>
-    </div>
+<h1> K8's Magic Cards</h1>
     <div class="row">
       <div class="col-md-12 cardSection">
       </div>
@@ -93,36 +60,26 @@
 
 
       //These are your Object Arrays
-      var arrayRaptors = [{ //Change arrayTopic to whatever topic your group chose in class
-          "imgUrl":"",
-          "number": 10,
-          "name": "Demar Derozan",
-          "position": "Guard",
-        //  "imgUrl": "http://via.placeholder.com/300x300",
-          "origin":"USA",
-          // "button": "More Info" //if u wish to do buttons
+      var arrayCrew = [{ //Change arrayTopic to whatever topic your group chose in class
+        "name":"I.B.",
+        "ethnicity":"Filipino Chinese",
+        "colour":"Pink",
+        "city":"Maple"
         },
 
         {
-          "imgUrl":"",
-          "number": 17,
-          "name": "Jonas Valanciunas",
-          "position": "Center",
-        //  "imgUrl": "http://via.placeholder.com/300x300",
-          "origin":"Lithuania",
-          // "button": "More Info" //if u wish to do buttons
+          "name":"BiaBot",
+          "ethnicity":"Italian",
+          "colour":"Baby Pink",
+          "city":"Etobicoke"
         },
 
-      {
-        "imgUrl":"",
-        "number": 9,
-        "name": "Serge Ibaka",
-        "position": "Forward",
-      //  "imgUrl": "http://via.placeholder.com/300x300",
-        "origin":"Republic of the Congo",
-        // "button": "More Info" //if u wish to do buttons
-      }
-
+        {
+          "name":"Thu",
+          "ethnicity":"Viet",
+          "colour":"Red",
+          "city":"Etobicoke"
+        }
       ];
 
       $(document).ready(function() {
@@ -133,18 +90,18 @@
 
 /*      Remember that each card needs the following things:
         - Gets the user do something such as redirecting to another page (this can be done with buttons, animations, etc.)
-        - Include and style the imgUrl
+        - Include and style the image
         - Be organized in a specific way (HINT: Flexbox)
  */
 
-        for (var i = 0; i < arrayDogs.length; i++) { //change arrayTopic to whatever you
+        for (var i = 0; i < arrayCrew.length; i++) { //change arrayTopic to whatever you
           html += "<div class='panel panel-default individualCard'>" +
-            "<div><img class='img-responsive' src='" + arrayDogs[i].imgUrl + "' /></div>" + //change the red text to the keys in your Array
-            "<div class='cardInfo nameLabel'>" + arrayDogs[i].name + "</div>" + //change the red text to the keys in your Array
-            "<div class='cardInfo ageLabel'>" + arrayDogs[i].age + "</div>" + //change the red text to the keys in your Array
-            "<div class='cardInfo breedLabel'>" + arrayDogs[i].breed + "</div>" + //change the red text to the keys in your Array
-            "<div class='cardInfo sizeLabel'>" + arrayDogs[i].size + "</div>" + //change the red text to the keys in your Array
-            // "<div class='itemButton'><button type='button' class='btn btn-default'>" + arrayDogs[i].button + "</button></div>" + //Button Template
+          //  "<div><img class='img-responsive' src='" + arrayTopic[i].imgUrl + "' /></div>" + //change the red text to the keys in your Array
+            "<div class='cardInfo nameLabel'>" + arrayCrew[i].name + "</div>" + //change the red text to the keys in your Array
+            "<div class='cardInfo ageLabel'>" + arrayCrew[i].ethnicity + "</div>" + //change the red text to the keys in your Array
+            "<div class='cardInfo ownerLabel'>" + arrayCrew[i].colour + "</div>" + //change the red text to the keys in your Array
+            "<div class='cardInfo ownerLabel'>" + arrayCrew[i].city + "</div>" + //change the red text to the keys in your Array
+            "<div class='itemButton'><button type='button' class='btn btn-default'>" + arrayTopic[i].button + "</button></div>" + //Button Template
             "</div>";
         }
         $(".outputArray").html(html); //outputs the loop onto the html
@@ -168,13 +125,13 @@
       //
       //     /*Remember that each card needs the following things:
       //         - Gets the user do something such as redirecting to another page (this can be done with buttons, animations, etc.)
-      //         - Include an imgUrl
+      //         - Include an image
       //         - Be organized in a specific way (HINT: JSON)
       //     */
       //
       //     //Here is the loop of the Array you made
       //     for (var i = 0; i < d.length; i++) {
-      //       html += "<div>" + d[i].name + "</div>"; //imgUrl
+      //       html += "<div>" + d[i].name + "</div>"; //Image
       //       html += "<div>" + d[i].texture + "</div>"; // Item 1
       //       html += "<div>" + d[i].temperature + "</div>"; // Item 2
       //       html += "<div>" + d[i].origin + "</div>"; // Item 3
