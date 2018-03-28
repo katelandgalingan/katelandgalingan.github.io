@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cards Website Template</title>
   <style media="screen">
+  @import url('https://fonts.googleapis.com/css?family=Lalezar');
+  @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
     .outputArray {
       display: flex;
       justify-content: space-around;
@@ -19,12 +21,52 @@
 
     .cardInfo {
       text-align: center;
+      padding: 5px;
+      font-family: 'Unbuntu Condensed', sans-serif;
+      font-size: 18px;
     }
-
     .itemButton{
-      text-align: right;
+      text-align: center;
       padding: 10px;
     }
+
+    img {
+      width: 200px;
+      height: 300px;
+    }
+
+    h1{
+      text-align: center;
+      font-family: 'Lalezar', sans-serif;
+      font-size: 400px;
+      color: red;
+    }
+
+    li {
+      display: inline-flex;
+      text-decoration: none;
+      font-size: 30px;
+    }
+
+    ul{
+      text-align: center;
+      word-spacing: 200px;
+      font-family: 'Ubuntu Condensed', sans-serif;
+    }
+
+    img{
+      width: 100%;
+      height: 100%;
+      padding-bottom: 40px;
+    }
+
+    footer{
+      text-align: center;
+      font-family: 'Ubuntu Condensed', sans-serif;
+      font-size: 15px;
+      color: red;
+    }
+
   </style>
 
   <!-- Bootstrap -->
@@ -39,9 +81,24 @@
     <![endif]-->
 </head>
 
+
+
 <body>
+
+
+<ul>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Roster</a></li>
+  <li><a href="#">Highlights</a></li>
+</ul>
+
+
   <div class="container">
-<h1> K8's Magic Cards</h1>
+
+    <div class="row">
+        <img src="https://i.pinimg.com/originals/c0/65/f1/c065f14f060304139317adcf06023496.jpg" alt="raptors" />
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-12 cardSection">
       </div>
@@ -52,6 +109,10 @@
     </div>
   </div>
 
+  <footer>
+    Kateland Week 11 Cards 2018
+  </footer>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -60,25 +121,28 @@
 
 
       //These are your Object Arrays
-      var arrayCrew = [{ //Change arrayTopic to whatever topic your group chose in class
-        "name":"I.B.",
-        "ethnicity":"Filipino Chinese",
-        "colour":"Pink",
-        "city":"Maple"
+      var animals = [{ //Change arrayTopic to whatever topic your group chose in class
+          "number": 10,
+          "name": "Demar Derozan",
+          "position": "Guard",
+          "imgUrl": "https://katelandgalingan.github.io/presentations/week11/demar.jpg",
+          "button": "See More" //if u wish to do buttons
         },
 
         {
-          "name":"BiaBot",
-          "ethnicity":"Italian",
-          "colour":"Baby Pink",
-          "city":"Etobicoke"
+          "number": 17,
+          "name": "Jonas Valanciunas",
+          "postion": "Center",
+          "imgUrl": "https://katelandgalingan.github.io/presentations/week11/jonas.png",
+          "button": "See More" //if u wish to do buttons
         },
 
         {
-          "name":"Thu",
-          "ethnicity":"Viet",
-          "colour":"Red",
-          "city":"Etobicoke"
+          "number": 9,
+          "name": "Serge Ibaka",
+          "position": "Forward",
+          "imgUrl": "https://katelandgalingan.github.io/presentations/week11/serge.jpg",
+          "button": "See More" //if u wish to do buttons
         }
       ];
 
@@ -94,14 +158,13 @@
         - Be organized in a specific way (HINT: Flexbox)
  */
 
-        for (var i = 0; i < arrayCrew.length; i++) { //change arrayTopic to whatever you
+        for (var i = 0; i < animals.length; i++) { //change arrayTopic to whatever you
           html += "<div class='panel panel-default individualCard'>" +
-          //  "<div><img class='img-responsive' src='" + arrayTopic[i].imgUrl + "' /></div>" + //change the red text to the keys in your Array
-            "<div class='cardInfo nameLabel'>" + arrayCrew[i].name + "</div>" + //change the red text to the keys in your Array
-            "<div class='cardInfo ageLabel'>" + arrayCrew[i].ethnicity + "</div>" + //change the red text to the keys in your Array
-            "<div class='cardInfo ownerLabel'>" + arrayCrew[i].colour + "</div>" + //change the red text to the keys in your Array
-            "<div class='cardInfo ownerLabel'>" + arrayCrew[i].city + "</div>" + //change the red text to the keys in your Array
-            "<div class='itemButton'><button type='button' class='btn btn-default'>" + arrayTopic[i].button + "</button></div>" + //Button Template
+          "<div><img class='img-responsive' src='" + animals[i].imgUrl + "' /></div>" + //change the red text to the keys in your Array
+            "<div class='cardInfo nameLabel'>" + animals[i].number + "</div>" + //change the red text to the keys in your Array
+            "<div class='cardInfo ageLabel'>" + animals[i].name + "</div>" + //change the red text to the keys in your Array
+            "<div class='cardInfo ownerLabel'>" + animals[i].position + "</div>" + //change the red text to the keys in your Array
+            "<div class='itemButton'><button type='button' class='btn btn-default'>" + animals[i].button + "</button></div>" + //Button Template
             "</div>";
         }
         $(".outputArray").html(html); //outputs the loop onto the html
