@@ -157,6 +157,13 @@ var spriteImages = [{
     "width": 4800,
     "height": 200,
     "name": "cat"
+  },
+  {
+    "spriteMapUrl": "katelandgalingan.github.io/class/week12/animation/wave.png",
+    "numFrames": 4,
+    "width": 4800,
+    "height": 200,
+    "name": "wave"
   }
 ];
 var animations = []; //an array to hold the currently existing sprite obects
