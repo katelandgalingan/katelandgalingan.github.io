@@ -159,11 +159,18 @@ var spriteImages = [{
     "name": "cat"
   },
   {
-    "spriteMapUrl": "katelandgalingan.github.io/class/week12/animation/wave.png",
+    "spriteMapUrl": "https://katelandgalingan.github.io/class/week12/animation/wave.png",
     "numFrames": 4,
-    "width": 4800,
-    "height": 200,
+    "width": 600,
+    "height": 100,
     "name": "wave"
+  },
+  {
+    "spriteMapUrl": "https://katelandgalingan.github.io/class/week12/animation/dab.png",
+    "numFrames": 6,
+    "width": 600,
+    "height": 100,
+    "name": "mario"
   }
 ];
 var animations = []; //an array to hold the currently existing sprite obects
